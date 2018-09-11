@@ -4,7 +4,7 @@ class App extends React.Component {
   public render() {
     return (
       <div>
-        <h6>/</h6>
+        <h6>选择排序</h6>
       </div>
     );
   }
