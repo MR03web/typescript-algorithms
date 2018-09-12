@@ -1,1 +1,3 @@
-使用typescript重新实现 [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms).
+使用typescript实现 [javascript-algorithms](https://github.com/trekhleb/javascript-algorithms).
+
+- 实现不完全一致 

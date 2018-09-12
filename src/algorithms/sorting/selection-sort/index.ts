@@ -1,17 +1,26 @@
 import comparator from "../../../utils/comparator";
 
-export default function demo(originalArray: number[]): number {
+/**
+ * @param {number[]} originalArray
+ * @returns {number[]}
+ */
+export default function selectionSort(originalArray: number[]): number[] {
   const array: number[] = [...originalArray];
+  const length: number = array.length;
 
-  array.forEach((el:number, i:number) => {
-    // 数组索引
-    // const index = i;
-    // // 临时最小值
-    // const tempMin = array[0];
-
-    // for (let index = 0; index < array.length; index++) {
-    //   const element = array[index];
-    // }
-  });
-  return 1;
+  for (let y = 0; y < length; y++) {
+    // 临时最小值索引
+    let minIndex = y;
+    for (let index = y + 1; index < length; index++) {
+      if (comparator.lessThan(array[index], array[minIndex])) {
+        minIndex = index;
+      }
+    }
+    if (minIndex !== y) {
+      const temp: number = array[y];
+      array[y] = array[minIndex];
+      array[minIndex] = temp;
+    }
+  }
+  return array;
 }

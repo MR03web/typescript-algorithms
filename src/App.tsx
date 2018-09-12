@@ -6,7 +6,10 @@ class App extends React.Component {
     return (
       <div>
         <h6>选择排序</h6>
-        <h4>{selectionSort([1, 2, 45, 456, 23])}</h4>
+        <h6>{[3, 45, 1, 45, 47, 6, 4, 23].toString()}</h6>
+        {selectionSort([3, 45, 1, 45, 47, 6, 4, 23]).map((el: number, i: number) => {
+          return <h6 key={i}>{el}</h6>;
+        })}
       </div>
     );
   }
