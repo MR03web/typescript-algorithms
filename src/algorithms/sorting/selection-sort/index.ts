@@ -1,4 +1,5 @@
 import comparator from "../../../utils/comparator";
+import arrayUtils from "../../../utils/arrayUtils";
 
 /**
  * @param {number[]} originalArray
@@ -9,17 +10,14 @@ export default function selectionSort(originalArray: number[]): number[] {
   const length: number = array.length;
 
   for (let y = 0; y < length; y++) {
-    // 临时最小值索引
-    let minIndex = y;
+    let minIndex = y; // 临时最小值索引
     for (let index = y + 1; index < length; index++) {
       if (comparator.lessThan(array[index], array[minIndex])) {
         minIndex = index;
       }
     }
     if (minIndex !== y) {
-      const temp: number = array[y];
-      array[y] = array[minIndex];
-      array[minIndex] = temp;
+      arrayUtils.exchange(array, y, minIndex);
     }
   }
   return array;
