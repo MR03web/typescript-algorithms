@@ -9,15 +9,15 @@ export default function selectionSort(originalArray: number[]): number[] {
   const array: number[] = [...originalArray];
   const length: number = array.length;
 
-  for (let y = 0; y < length; y++) {
-    let minIndex = y; // 临时最小值索引
-    for (let index = y + 1; index < length; index++) {
+  for (let i = 0; i < length; i++) {
+    let minIndex = i; // 临时最小值索引
+    for (let index = i + 1; index < length; index++) {
       if (comparator.lessThan(array[index], array[minIndex])) {
         minIndex = index;
       }
     }
-    if (minIndex !== y) {
-      arrayUtils.exchange(array, y, minIndex);
+    if (minIndex !== i) {
+      arrayUtils.exchange(array, i, minIndex);
     }
   }
   return array;
