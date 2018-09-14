@@ -31,5 +31,5 @@ export default function quickSort(originalArray: number[]): number[] {
   const leftArraySorted: number[] = quickSort(leftArray);
   const rightArraySorted: number[] = quickSort(rightArray);
 
-  return leftArraySorted.concat(centerArray, rightArraySorted);;
+  return leftArraySorted.concat(centerArray, rightArraySorted);
 }

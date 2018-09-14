@@ -1,7 +1,7 @@
 import * as React from "react";
 import sort from "./algorithms/sorting/quick-sort";
 
-const arr: number[] = [3, 1, 45, 2, 40, 47, 6, 4, 23, 5];
+const arr: number[] = [3, 1];
 class App extends React.Component {
   public render() {
     return (
