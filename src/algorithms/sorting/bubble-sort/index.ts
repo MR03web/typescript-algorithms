@@ -7,6 +7,7 @@ import arrayUtils from "../../../utils/arrayUtils";
 export default function bubbleSort(originalArray: number[]): number[] {
   const array: number[] = [...originalArray];
   const length: number = array.length;
+
   let swapped = false;
   for (let i = 1; i < length; i++) {
     swapped = false;
@@ -20,5 +21,6 @@ export default function bubbleSort(originalArray: number[]): number[] {
       break;
     }
   }
+  
   return array;
 }
