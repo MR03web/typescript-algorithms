@@ -11,14 +11,14 @@ export default function quickSort(originalArray: number[]): number[] {
     return array;
   }
 
-  const leftArray = [];
-  const rightArray = [];
+  const leftArray: number[] = [];
+  const rightArray: number[] = [];
 
-  const pivotElement = array.shift();
-  const centerArray = pivotElement ? [pivotElement] : [];
+  const pivotElement: number | undefined = array.shift();
+  const centerArray: number[] = pivotElement ? [pivotElement] : [];
 
   while (array.length) {
-    const currentElement = array.shift();
+    const currentElement: number | undefined = array.shift();
     if (pivotElement && currentElement) {
       if (comparator.equal(currentElement, pivotElement)) {
         centerArray.push(currentElement);
@@ -28,11 +28,9 @@ export default function quickSort(originalArray: number[]): number[] {
         rightArray.push(currentElement);
       }
     } 
-
   }
-
-  const leftArraySorted = quickSort(leftArray);
-  const rightArraySorted = quickSort(rightArray);
+  const leftArraySorted: number[] = quickSort(leftArray);
+  const rightArraySorted: number[] = quickSort(rightArray);
 
   return leftArraySorted.concat(centerArray, rightArraySorted);;
 }
