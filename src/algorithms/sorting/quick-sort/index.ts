@@ -1,5 +1,4 @@
 import comparator from "../../../utils/comparator";
-// import arrayUtils from "../../../utils/arrayUtils";
 
 /**
  * @param {number[]} originalArray
@@ -27,7 +26,7 @@ export default function quickSort(originalArray: number[]): number[] {
       } else {
         rightArray.push(currentElement);
       }
-    } 
+    }
   }
   const leftArraySorted: number[] = quickSort(leftArray);
   const rightArraySorted: number[] = quickSort(rightArray);
